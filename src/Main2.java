@@ -41,15 +41,34 @@ public class Main2 {
             }
         }
 
-        Dev dev = new Dev();
-        dev.setNome("Ronald");
-        dev.inscreverBootcamp(bootcamp);
-        dev.progredir();
-        dev.progredir();
+        continuar = true;
 
-        System.out.println("O meu XP é de " + dev.calcularTotalXp() + 
+        while (continuar) {
+            System.out.println("Deseja adicionar um aluno: ");
+
+            System.out.println("Digite o nome do aluno: ");
+            String nomeDoDev = entrada.nextLine();
+
+            Dev dev = new Dev();
+            dev.setNome(nomeDoDev);
+
+            dev.inscreverBootcamp(bootcamp);
+            dev.progredir();
+            dev.progredir();
+
+            System.out.println("O meu XP é de " + dev.calcularTotalXp() + 
                            "\nE meus conteúdos concluídos são " + dev.getConteudosConcluidos() + 
                            "\nE inscritos " + dev.getConteudosInscritos());
+            System.out.println("Deseja adicioanar mais alunos S/N");
+            String verificar = entrada.nextLine();
+            if(!verificar.equalsIgnoreCase("s")){
+                continuar = false;
+            }          
+        }
+
+        
+        
+        
 
         entrada.close();
     }
