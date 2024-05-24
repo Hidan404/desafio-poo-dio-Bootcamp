@@ -13,6 +13,7 @@ public class Main2 {
         Bootcamp bootcamp = new Bootcamp();
         bootcamp.setNome("Java Bootcamp");
         bootcamp.setDescricao("Desenvolvimento em Backend Java");
+        bootcamp.getDataFinal();
 
         boolean continuar = true;
 
@@ -32,7 +33,10 @@ public class Main2 {
             curso.setDescricao(cursoDescricao);
             curso.setCargaHoraria(cargaHoraria);
 
+            
+
             bootcamp.getConteudos().add(curso);
+
 
             System.out.println("Deseja adicionar outro curso? (s/n): ");
             String resposta = entrada.nextLine();
