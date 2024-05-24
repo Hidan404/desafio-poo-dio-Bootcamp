@@ -23,8 +23,8 @@ public class Curso extends Conteudo{
 
     @Override
     public String toString() {
-        return "Curso calcularXp(): " + calcularXp() + ", getTitulo(): " + getTitulo() + ", getCargaHoraria(): "
-                + getCargaHoraria() + ", getDescricao(): " + getDescricao() ;
+        return "Curso calcularXp(): " + calcularXp() + "\ngetTitulo(): " + getTitulo() + "\ngetCargaHoraria(): "
+                + getCargaHoraria() + "\ngetDescricao(): " + getDescricao() ;
     }
 
     
